@@ -1,23 +1,23 @@
-package klatch.krone.at;
+package klatchkrone.at;
 
-public class PrintAbonnent implements Abonnent{
+public class WebAbonnent implements Abonnent{
+
     private String name;
     private Medienverlag klatch;
-    public PrintAbonnent(String name, Medienverlag klatch) {
+    public WebAbonnent(String name, Medienverlag klatch) {
         this.name = name;
         this.klatch = klatch;
         klatch.addSubscribe(this);
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
-
-
     //wenn Medieverlag einen neuen Artikel heraus bringt
     @Override
     public void erhalte(Artikel artikel) {
-        System.out.println("Print Abonnent " + name + " hat eine neue Zeitung erhalten, mit dem Artikel: " + artikel.getTitel());
+        System.out.println("Web Abonnent " + name + " hat eine neue Link erhalten, mit dem Artikel: " + artikel.getTitel());
     }
 }

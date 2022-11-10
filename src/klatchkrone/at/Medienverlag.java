@@ -1,7 +1,6 @@
-package klatch.krone.at;
+package klatchkrone.at;
 
 import java.util.ArrayList;
-import java.util.List;
 
 //sollte abstract ein
 public class Medienverlag {

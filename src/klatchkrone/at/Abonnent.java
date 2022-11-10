@@ -1,4 +1,4 @@
-package klatch.krone.at;
+package klatchkrone.at;
 
 public interface Abonnent {
 

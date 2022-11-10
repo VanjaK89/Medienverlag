@@ -1,9 +1,9 @@
-package klatch.krone.at;
+package klatchkrone.at;
 
-public class SMSAbonnent implements Abonnent {
+public class PrintAbonnent implements Abonnent{
     private String name;
     private Medienverlag klatch;
-    public SMSAbonnent(String name, Medienverlag klatch) {
+    public PrintAbonnent(String name, Medienverlag klatch) {
         this.name = name;
         this.klatch = klatch;
         klatch.addSubscribe(this);
@@ -13,9 +13,11 @@ public class SMSAbonnent implements Abonnent {
         return name;
     }
 
+
+
     //wenn Medieverlag einen neuen Artikel heraus bringt
     @Override
     public void erhalte(Artikel artikel) {
-        System.out.println("SMS Abonnent " + name + " hat eine neue SMS erhalten, mit dem Artikel: " + artikel.getTitel());
+        System.out.println("Print Abonnent " + name + " hat eine neue Zeitung erhalten, mit dem Artikel: " + artikel.getTitel());
     }
 }
